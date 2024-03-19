@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Website - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: magenta; /* Updated text color to magenta */
+        }
+
+        header, nav, footer {
+            background-color: #FFB6C1;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav a {
+            color: magenta; /* Updated text color to magenta */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section.content {
+            padding: 16px;
+            background-image: url('bg2.jpg'); /* Replace with the path or URL of your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 8px; /* Optional: Add border-radius for a rounded corner effect */
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 220px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.1);
+        }
+
+        .image-text {
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 16px;
+        }
+
+        form label, form input, form select {
+            display: block;
+            margin-bottom: 8px;
+            color: magenta; /* Updated text color to magenta */
+        }
+
+        #orderStatus {
+            margin-top: 16px;
+            font-weight: bold;
+            color: magenta; /* Updated text color to magenta */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Food Delivery</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order Now</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="content">
+        <h2>Welcome to Food Delivery</h2>
+        <p>Explore our delicious menu and place your order online.</p>
+
+        <div class="image-grid">
+            <!-- Replace the image URLs with your actual image URLs -->
+            <div>
+                <img src="pizza.jpg" alt="Delicious Pizza">
+                <p class="image-text">Delicious Pizza</p>
+            </div>
+            <div>
+                <img src="fs.jpg" alt="Fresh Salad">
+                <p class="image-text">Fresh Salad</p>
+            </div>
+            <div>
+                <img src="burger.jpg" alt="Burger">
+                <p class="image-text">Burger</p>
+            </div>
+            <div>
+                <img src="ff.jpg" alt="French Fries">
+                <p class="image-text">French Fries</p>
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+
+        <form>
+            <label for="orderItem">Select Item:</label>
+            <select id="orderItem">
+                <option value="pizza">Delicious Pizza</option>
+                <option value="salad">Fresh Salad</option>
+                <option value="french fries">French Fries</option>
+                <option value="burger">Burger</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" value="1">
+
+            <!-- Checkbox to simulate order placement -->
+            <input type="checkbox" id="orderCheckbox">
+            <label for="orderCheckbox">Place Order</label>
+
+            <!-- Order status container -->
+            <div id="orderStatus">Order Placed: <span id="orderQuantity"></span> <span id="orderItemText"></span>(s).</div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Food Delivery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

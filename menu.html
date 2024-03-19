@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Website - Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        /* Your existing styles remain unchanged */
+
+        /* Add custom CSS for grid images */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Add custom CSS for dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .menu-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+        
+        .image-grid {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
+        }
+
+        .image-grid img {
+            width: 500%;
+            max-width: 600px; /* Adjust the maximum width as needed */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section.content {
+            padding: 16px;
+        }
+
+        .menu-item img {
+            max-width: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Food Delivery</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order Now</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+ 
+
+        <!-- Background image for the menu page -->
+
+        <div class="dropdown">
+            <span>Categories</span>
+            <div class="dropdown-content">
+                <div class="menu-item">
+                    <img src="pizza.jpg" alt="Pizza">
+                    <p>Delicious Pizza</p>
+                </div>
+                <div class="menu-item">
+                    <img src="fs.jpg" alt="Fresh Salad">
+                    <p>Fresh Salad</p>
+                </div>
+                <!-- Add more menu items as needed -->
+            </div>
+        </div>
+
+        <section class="content">
+            <h2>Menu</h2>
+    
+            <div class="image-grid">
+                <img src="pizza.jpg" alt="Menu Image 1">
+                <img src="ff.jpg" alt="Menu Image 2">
+                <img src="fs.jpg" alt="Menu Image 3">
+                <img src="burger.jpg" alt="Menu Image 4">
+                <!-- Add more images as needed -->
+            </div>
+    
+
+        <!-- Additional content for the menu page -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Food Delivery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
